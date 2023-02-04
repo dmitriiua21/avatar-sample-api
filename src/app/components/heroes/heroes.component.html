@@ -1,0 +1,19 @@
+<section class="py-5" *ngIf="isLoaded">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-3" *ngFor="let hero of characters">
+        <div class="card mb-4 justify-content-center">
+          <img [attr.src]="hero.image" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ hero.name }}</h5>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li class="card-text">born: {{ hero.bio.born }}</li>
+              <li class="card-text">{{ hero.bio.ethnicity }}</li>
+              <li class="card-text">{{ hero.bio.nationality }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
